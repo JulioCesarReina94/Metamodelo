@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.example.bowling:Liga xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.eclipse.example.bowling="https://org/eclipse/example/bowling" nombre="America">
+  <jugadores nombre="James Rodriguez" fechaNacimiento="1994-04-01T00:00:00.000-0600"/>
+  <jugadores nombre="Leonel Messi" fechaNacimiento="1990-01-01T00:00:00.000-0600"/>
+</org.eclipse.example.bowling:Liga>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.example.bowling:Torneo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.eclipse.example.bowling="https://org/eclipse/example/bowling">
+  <matchups>
+    <juegos>
+      <jugador href="../Bolos/liga.bowling#//@jugadores.0"/>
+    </juegos>
+    <juegos>
+      <jugador href="../Bolos/liga.bowling#//@jugadores.1"/>
+    </juegos>
+  </matchups>
+</org.eclipse.example.bowling:Torneo>
