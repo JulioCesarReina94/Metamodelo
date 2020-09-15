@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bowling" nsURI="https://org/eclipse/example/bowling" nsPrefix="org.eclipse.example.bowling">
+  <eClassifiers xsi:type="ecore:EClass" name="Jugador">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaNacimiento" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="altura" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="esProfesional" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Liga">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jugadores" upperBound="-1"
+        eType="#//Jugador" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Torneo">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="matchups" upperBound="-1"
+        eType="#//MatchUp" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//TipoTorneo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MatchUp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="juegos" upperBound="-1"
+        eType="#//Juego" containment="true" eOpposite="#//Juego/matchup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Juego">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="matchup" eType="#//MatchUp"
+        eOpposite="#//MatchUp/juegos"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jugador" eType="#//Jugador"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TipoTorneo">
+    <eLiterals name="Pro" literal="Pro"/>
+    <eLiterals name="Amateur" value="1" literal="Amateur"/>
+  </eClassifiers>
+</ecore:EPackage>
